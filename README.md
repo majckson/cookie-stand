@@ -16,8 +16,8 @@ Links and Resources
 
 * https://codefellows.github.io/code-201-guide/curriculum/class-02/project_setup
 
-* in class demo
 
+* in class demo
 
 Reflections and Comments:
 
