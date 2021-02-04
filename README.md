@@ -16,6 +16,7 @@ Links and Resources
 
 * https://codefellows.github.io/code-201-guide/curriculum/class-02/project_setup
 
+* https://restaurantguys.typepad.com/.a/6a0120a6c9e1b4970b01b8d150e261970c-pi
 
 * in class demo
 
