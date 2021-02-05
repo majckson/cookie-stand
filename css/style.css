@@ -59,6 +59,8 @@ main {
 
 main img {
   margin-top: 30px;
+width: 100%;
+height: auto;
 }
 
 main li:first-child{
@@ -103,6 +105,17 @@ border-radius: 10px;
 article div:hover {
   background-color: red;
   transition: 350ms;
+}
+
+table{
+border: darkslategray;
+border-radius: 10px;
+padding-block: 5px;
+color: rgb(196, 52, 129);
+margin-top: 30px;
+width: 90px;
+background-color: rgb(105, 83, 83);
+
 }
 
 /* footer */
