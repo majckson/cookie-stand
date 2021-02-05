@@ -29,13 +29,14 @@ Store.prototype.calcCookiesSoldEachHour = function () {
     let randomGuest = this.randomCustomerEachHour();
     let hourlyTotal = Math.ceil(randomGuest * this.avg);
     this.cookiesPerHour.push(hourlyTotal);
-    this.dailyStoreTotal = this.dailyStoreTotal + this.cookiesPerHour[i];
+    this.dailyStoreTotal += hourlyTotal;
   }
 };
 
 Store.prototype.render = function () {
   this.calcCookiesSoldEachHour();
   let tr = document.createElement('tr');
+  
 
   let th = document.createElement('th');
   th.textContent = this.store;
