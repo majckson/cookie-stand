@@ -4,11 +4,14 @@ console.log('hello world');
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-
+// let cookieTable = document.getElementById('cookie-table');
+// let tableHeader = document.getElementById('table-header');
+// let tableFooter = document.getElementById('table-footer');
 let allStores = [];
 //let myContainer = document.getElementById('container');
 let tbody = document.getElementById('body-rows');
 //let cookieTable = document.getElementById('cookie-table');
+let myForm = document.getElementById('container');
 
 function Store(name, minimumCustomerEachHour, maximumCustomerEachHour, avgCookiesPerCustomer) {
   this.store = name;
@@ -25,6 +28,7 @@ Store.prototype.randomCustomerEachHour = function () {
 };
 
 Store.prototype.calcCookiesSoldEachHour = function () {
+  this.calcHourlyCustomers();
   for (let i = 0; i < hours.length; i++) {
     let randomGuest = this.randomCustomerEachHour();
     let hourlyTotal = Math.ceil(randomGuest * this.avg);
@@ -72,6 +76,18 @@ function renderAll() {
     allStores[i].render();
 
   }
+}
+
+let calcGrandTotals = function(){
+  let newGrandTotal = new Array(hours.length + 1);
+  newGrandTotal.fill(0);
+  for (let i = 0; i < allStores.length; i++){
+    for (let j = 0; j < allStores[i].cookiesPerHour.length; j++){
+      newGrandTotal[j] += allStores[i].cookiesPerHour[j];
+      newGrandTotal[newGrandTotal.length - 1] += allStores[i].cookiesPerHour[j];
+    }
+  }
+  return newGrandTotal;
 }
 
 // function renderFooter() {
