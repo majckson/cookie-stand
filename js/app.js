@@ -9,7 +9,15 @@ let allStores = [];
 let myContainer = document.getElementById('container');
 let tbody = document.getElementById('body-rows');
 //let cookieTable = document.getElementById('cookie-table');
+
 let tableFooter = document.getElementById('table-footer');
+
+
+let tableFooter = document.getElementById('table-footer');
+
+let myForm = document.getElementById('container');
+
+
 
 function Store(name, minimumCustomerEachHour, maximumCustomerEachHour, avgCookiesPerCustomer) {
   this.store = name;
@@ -65,6 +73,30 @@ function renderHeader() {
   th.textContent = 'Daily Total';
   header.appendChild(th);
 }
+
+
+
+let calcGrandTotals = function(){
+  let newGrandTotal = new Array(hours.length + 1);
+  newGrandTotal.fill(0);
+  for (let i = 0; i < allStores.length; i++){
+    for (let j = 0; j < allStores[i].cookiesPerHour.length; j++){
+      newGrandTotal[j] += allStores[i].cookiesPerHour[j];
+      newGrandTotal[newGrandTotal.length - 1] += allStores[i].cookiesPerHour[j];
+    }
+  }
+  return newGrandTotal;
+}
+
+// function renderFooter() {
+//   let footer = document.getElementById('table-footer');
+//   for (let i = 0; i < allStores.length; i++) {
+//     let td = document.getElementById('td');
+//     td.textContent = allStores[i];
+//     footer.appendChild(td);
+
+//   }
+// }
 
 function renderFooter() {
   let tr = document.createElement('tr');
