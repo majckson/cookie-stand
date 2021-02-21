@@ -9,6 +9,7 @@ let allStores = [];
 //let myContainer = document.getElementById('container');
 let tbody = document.getElementById('body-rows');
 //let cookieTable = document.getElementById('cookie-table');
+let tableFooter = document.getElementById('table-footer');
 
 function Store(name, minimumCustomerEachHour, maximumCustomerEachHour, avgCookiesPerCustomer) {
   this.store = name;
@@ -66,13 +67,6 @@ function renderHeader() {
   header.appendChild(th);
 }
 
-function renderAll() {
-  renderHeader();
-  for (let i = 0; i < allStores.length; i++) {
-    allStores[i].render();
-
-  }
-}
 
 // function renderFooter() {
 //   let footer = document.getElementById('table-footer');
@@ -83,8 +77,7 @@ function renderAll() {
 
 //   }
 // }
-let tableFooter = document.getElementById('table-footer');
-function renderFooter(){
+function renderFooter() {
   let tr = document.createElement('tr');
   let th = document.createElement('th');
   tableFooter.appendChild(tr);
@@ -114,6 +107,13 @@ new Store('dubai', 11, 38, 2.3, []);
 new Store('paris', 20, 38, 2.3, []);
 new Store('lima', 2, 16, 4.6, []);
 
+function renderAll() {
+  renderHeader();
+  for (let i = 0; i < allStores.length; i++) {
+    allStores[i].render();
+
+  }
+}
 renderAll();
 renderFooter();
 // seattleStore.render();
