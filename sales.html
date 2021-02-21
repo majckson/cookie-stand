@@ -18,21 +18,41 @@
       <span><a href="index.html">Home</a></span>
     </nav>
   </header>
-<main><img src="img/family.jpg" alt="Family">
+  <main><img src="img/family.jpg" alt="Family">
 
-  <table id="cookie-table">
-    <thead>
-      <tr id="first-row">
-        <th></th>
-      </tr>
-    </thead>
-    <tbody id="body-rows"></tbody>
-    <tfoot id="table-footer"></tfoot>
-  </table>
+    <form id="container"></form>
+    <fieldset>
+      <legend>Input Store Information</legend>
 
-</main>
+      <label for="store">Store Name</label>
+      <input type="text" name="store">
+
+      <label for="AvgCookiesPerCustomer">Average Cookies Per Customer</label>
+      <input type="number" name="AvgCookiesPerCustomer">
+
+      <label for="MinHourlyCustomers">Minimum Customers Per Hour</label>
+      <input type="number" name="MinHourlyCustomers">
+
+      <label for="MaxHourlyCustomers">Maximum Customers Per Hour</label>
+      <input type="number" name="MaxHourlyCustomers">
+
+      <button type="submit">Add to Chart</button>
+
+    </fieldset>
+    <table id="cookie-table">
+      <thead>
+        <tr id="first-row">
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="body-rows"></tbody>
+      <tfoot id="table-footer"></tfoot>
+    </table>
+
+  </main>
 
   <script src="js/app.js"></script>
 </body>
 <footer></footer>
+
 </html>
