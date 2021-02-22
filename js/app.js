@@ -12,10 +12,7 @@ let tbody = document.getElementById('body-rows');
 
 let tableFooter = document.getElementById('table-footer');
 
-
-let tableFooter = document.getElementById('table-footer');
-
-let myForm = document.getElementById('container');
+// let myForm = document.getElementById('container');
 
 
 
@@ -58,6 +55,7 @@ Store.prototype.render = function () {
   }
   let td = document.createElement('td');
   td.textContent = this.dailyStoreTotal;
+  tr.appendChild(td);
   tbody.appendChild(tr);
 };
 
@@ -76,17 +74,17 @@ function renderHeader() {
 
 
 
-let calcGrandTotals = function(){
-  let newGrandTotal = new Array(hours.length + 1);
-  newGrandTotal.fill(0);
-  for (let i = 0; i < allStores.length; i++){
-    for (let j = 0; j < allStores[i].cookiesPerHour.length; j++){
-      newGrandTotal[j] += allStores[i].cookiesPerHour[j];
-      newGrandTotal[newGrandTotal.length - 1] += allStores[i].cookiesPerHour[j];
-    }
-  }
-  return newGrandTotal;
-}
+// let calcGrandTotals = function () {
+//   let newGrandTotal = new Array(hours.length + 1);
+//   newGrandTotal.fill(0);
+//   for (let i = 0; i < allStores.length; i++) {
+//     for (let j = 0; j < allStores[i].cookiesPerHour.length; j++) {
+//       newGrandTotal[j] += allStores[i].cookiesPerHour[j];
+//       newGrandTotal[newGrandTotal.length - 1] += allStores[i].cookiesPerHour[j];
+//     }
+//   }
+//   return newGrandTotal;
+// }
 
 // function renderFooter() {
 //   let footer = document.getElementById('table-footer');
@@ -128,7 +126,7 @@ function handleSubmit(event) {
   let minNumHourlyCustomers = +event.target.minNumHourlyCustomers.value;
   let maxNumHourlyCustomers = +event.target.maxNumHourlyCustomers.value;
   let avgNumCookiesPerCustomer = +event.target.avgNumCookiesPerCustomer.value;
-  let newStore = new Store (store, minNumHourlyCustomers, maxNumHourlyCustomers,avgNumCookiesPerCustomer);
+  let newStore = new Store(store, minNumHourlyCustomers, maxNumHourlyCustomers, avgNumCookiesPerCustomer);
   newStore.render();
   tableFooter.removeChild(tableFooter.firstChild);
   renderFooter();

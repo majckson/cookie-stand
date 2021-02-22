@@ -1,0 +1,39 @@
+
+nav li {
+    float: left;
+    margin-right: 10px;
+  }
+  nav li a{
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+  }
+  nav li a:hover{
+    background-color:rgb(48, 148, 48);
+    color: white;
+    font-weight: 900;
+  }
+  nav ul {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  header {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(245, 106, 90);
+  }
+  nav {
+    display:inline-block;
+    margin: 0 auto;
+  }
+  body {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  header h1 {
+    font-size: 50px;
+    text-shadow: rgb(19, 92, 29) 2px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }

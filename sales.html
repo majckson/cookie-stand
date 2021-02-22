@@ -4,20 +4,24 @@
 <head>
   <title>Salmon Cookies</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/sales.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <h1>Salmon Cookies Sales</h1>
+    <h1>Pat's Salmon Cookies</h1>
     <nav>
-      <a href="#"><img src="img/salmon.png" alt="Picture of a salmon" title="Salmon"></a>
-      <span><a href="contact.html">Contact</a></span>
-      <span><a href="merch.html">Merch</a></span>
-      <span><a href="aboutUs.html">About Us</a></span>
-      <span><a href="index.html">Home</a></span>
+      <!-- <a href="#"><img src="img/salmon.png" alt="Picture of a salmon" title="Salmon"></a> -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="sales.html">Sales</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
   <main><img src="img/family.jpg" alt="Family">
@@ -27,16 +31,16 @@
       <legend>Input Store Information</legend>
 
       <label for="store">Store Name</label>
-      <input type="text" name="store">
+      <input type="text" name="store" required>
 
       <label for="AvgNumCookiesPerCustomer">Average Cookies Per Customer</label>
-      <input type="number" name="avgNumCookiesPerCustomer">
+      <input type="number" step=".1" name="avgNumCookiesPerCustomer" required>
 
       <label for="MinNumHourlyCustomers">Minimum Customers Per Hour</label>
-      <input type="number" name="minNumHourlyCustomers">
+      <input type="number" name="minNumHourlyCustomers" required>
 
       <label for="MaxNumHourlyCustomers">Maximum Customers Per Hour</label>
-      <input type="number" name="maxNumHourlyCustomers">
+      <input type="number" name="maxNumHourlyCustomers" required>
 
       <button type="Submit">Add to Chart</button>
 
